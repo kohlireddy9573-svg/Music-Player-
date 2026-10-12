@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Music Player</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+    <!-- HEADER -->
+
+    <header class="header">
+
+        <div class="logo">
+            🎵 <span>Music Player</span>
+        </div>
+
+
+        <!-- THEME TOGGLE -->
+
+        <button id="themeToggle" class="theme-btn">
+            ☀️
+        </button>
+
+    </header>
+
+
+    <!-- MAIN CONTENT -->
+
+    <main class="container">
+
+
+        <!-- =====================
+             ALL SONGS SECTION
+        ====================== -->
+
+        <section class="all-songs-section">
+
+            <div class="section-heading">
+
+                <h2>All Songs</h2>
+
+
+                <!-- GENRE FILTER -->
+
+                <select id="genreFilter">
+
+                    <option value="all">
+                        All Genres
+                    </option>
+
+                    <option value="pop">
+                        Pop
+                    </option>
+
+                    <option value="rock">
+                        Rock
+                    </option>
+
+                    <option value="hiphop">
+                        Hip Hop
+                    </option>
+
+                    <option value="classical">
+                        Classical
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- SONGS LIST -->
+
+            <div
+                id="songsList"
+                class="songs-list"
+            >
+
+                <!-- Songs added using JavaScript -->
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================
+             NOW PLAYING SECTION
+        ====================== -->
+
+        <section class="song-card-section">
+
+            <h2>Now Playing</h2>
+
+
+            <div class="song-card">
+
+
+                <!-- CURRENT SONG IMAGE -->
+
+                <img
+                    id="currentSongImage"
+                    src="https://placehold.co/300x300"
+                    alt="Song cover"
+                >
+
+
+                <!-- CURRENT SONG DETAILS -->
+
+                <div class="song-info">
+
+                    <h3 id="currentSongName">
+                        Select a Song
+                    </h3>
+
+                    <p id="currentSongArtist">
+                        Artist Name
+                    </p>
+
+                </div>
+
+
+                <!-- MUSIC CONTROLS -->
+
+                <div class="controls">
+
+                    <button
+                        id="previousBtn"
+                        aria-label="Previous song"
+                    >
+                        ⏮
+                    </button>
+
+
+                    <button
+                        id="playBtn"
+                        class="play-btn"
+                        aria-label="Play song"
+                    >
+                        ▶
+                    </button>
+
+
+                    <button
+                        id="nextBtn"
+                        aria-label="Next song"
+                    >
+                        ⏭
+                    </button>
+
+                </div>
+
+
+                <!-- ADD TO PLAYLIST -->
+
+                <button
+                    id="addToPlaylistBtn"
+                    class="add-playlist-btn"
+                >
+                    + Add to Playlist
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================
+             PLAYLIST SECTION
+        ====================== -->
+
+        <section class="playlist-section">
+
+
+            <div class="section-heading">
+
+                <h2>Playlists</h2>
+
+
+                <!-- CREATE PLAYLIST -->
+
+                <div class="create-playlist">
+
+                    <input
+                        type="text"
+                        id="playlistInput"
+                        placeholder="Enter playlist name..."
+                    >
+
+
+                    <button id="createPlaylistBtn">
+
+                        + Create Playlist
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- SEARCH PLAYLISTS -->
+
+            <input
+                type="text"
+                id="playlistSearch"
+                placeholder="Search playlists..."
+                class="search-input"
+            >
+
+
+            <!-- PLAYLIST CARDS -->
+
+            <div
+                id="playlistsContainer"
+                class="playlists-container"
+            >
+
+                <!-- Playlists added using JavaScript -->
+
+            </div>
+
+
+            <!-- =====================
+                 PLAYLIST SONGS
+            ====================== -->
+
+            <div
+                id="playlistSongsContainer"
+                class="playlist-songs-container"
+            >
+
+                <!-- Songs from selected playlist appear here -->
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
